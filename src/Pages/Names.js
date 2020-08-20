@@ -55,24 +55,24 @@ const styles = (Theme) => ({
 		display:'flex',
 		[Theme.breakpoints.down('sm')]:{
 			'flex-direction':'column',
-			position:'relative',
-			top:'-50px',
 		}
 	},
 	leftSide:{
 		'flex-grow':1,
 		padding:10,
-		'padding-bottom':0,
+		
 		[Theme.breakpoints.down('sm')]:{
-			backgroundColor:'#052429'
+			backgroundColor:'#052429',
+			'padding-bottom':0,
 		}
 	},
 	rightSide:{
 		'flex-grow':1,
 		padding:10,
-		'padding-top':0,
+		
 		[Theme.breakpoints.down('sm')]:{
-			backgroundColor:'#052429'
+			backgroundColor:'#052429',
+			'padding-top':0,
 		}
 	}
 })

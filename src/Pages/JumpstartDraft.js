@@ -5,6 +5,7 @@ import Header from '../Components/Header';
 import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
 import MatchMini from '../Components/MatchMini';
+import Theme from '../Theme/Theme';
 
 const mapStateToProps = state => {
 	return {
@@ -22,7 +23,7 @@ const mapDispatchToProps = (dispatch) => {
 	}
 	
 }
-const styles = () => ({
+const styles = (Theme) => ({
 	playerCard:{
 		'margin-bottom':10,
 		padding:10,

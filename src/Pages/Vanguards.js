@@ -9,6 +9,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import InputLabel from '@material-ui/core/InputLabel';
 import Button from '@material-ui/core/Button';
 import produce from 'immer';
+import Theme from '../Theme/Theme';
 
 const mapStateToProps = state => {
 	return {
@@ -52,14 +53,25 @@ const styles = () => ({
 	vanguardWrapper:{
 		'flex-grow':1,
 		display:'flex',
+		[Theme.breakpoints.down('sm')]:{
+			'flex-direction':'column',
+		}
 	},
 	leftSide:{
 		'flex-grow':1,
 		padding:10,
+		[Theme.breakpoints.down('sm')]:{
+			backgroundColor:'#052429',
+			'padding-bottom':0,
+		}
 	},
 	rightSide:{
 		'flex-grow':1,
 		padding:10,
+		[Theme.breakpoints.down('sm')]:{
+			backgroundColor:'#052429',
+			'padding-top':0,
+		}
 	}
 })
 
@@ -120,7 +132,7 @@ const ConnectedVanguards = (props) => {
 						'' ) :
 					'' }
 				</div>
-				<div className={classes.leftSide}>
+				<div className={classes.rightSide}>
 					{Array.isArray(state.players) & Array.isArray(state.vanguards) !== false ? 
 						state.players.map((el, index) => index > 3 ?
 							<Card className={classes.playerCard} key={index}>

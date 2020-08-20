@@ -48,7 +48,7 @@ const styles = (Theme) => ({
 		backgroundImage: `url(${Skyline})`,
 		backgroundSize: 'contain',
 		[Theme.breakpoints.down('sm')]:{
-			bottom:'30px',
+			bottom:'0px',
 		}
 	},
 	centerCont:{
