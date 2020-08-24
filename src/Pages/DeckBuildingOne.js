@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { withStyles } from '@material-ui/core/styles';
 import Header from '../Components/Header';
 import MatchMini from '../Components/MatchMini';
+import MatchMiniV2 from '../Components/MatchMiniV2';
 import Divider from '@material-ui/core/Divider';
 
 const mapStateToProps = state => {
@@ -90,7 +91,7 @@ const ConnectedDeckBuildingOne= (props) => {
 					{Object.keys(props.matches).length === 0 ? "" :
 						props.matches.matchFive.Matches.map((el, index) =>
 							index < 4 ?
-								<MatchMini matchRound="matchFive" key={index} nmb={index} quarter/> : ''
+								<MatchMiniV2 matchRound="matchFive" key={index} nmb={index} quarter smallText/> : ''
 						)
 					}
 				</div>
@@ -98,7 +99,7 @@ const ConnectedDeckBuildingOne= (props) => {
 					{Object.keys(props.matches).length === 0 ? "" :
 						props.matches.matchSix.Matches.map((el, index) =>
 							index < 4 ?
-								<MatchMini matchRound="matchSix" key={index} nmb={index} quarter/> : ''
+								<MatchMiniV2 matchRound="matchSix" key={index} nmb={index} quarter smallText/> : ''
 						)
 					}
 				</div>
@@ -106,7 +107,7 @@ const ConnectedDeckBuildingOne= (props) => {
 					{Object.keys(props.matches).length === 0 ? "" :
 						props.matches.matchSeven.Matches.map((el, index) =>
 							index < 4 ?
-								<MatchMini matchRound="matchSeven" key={index} nmb={index} quarter/> : ''
+								<MatchMiniV2 matchRound="matchSeven" key={index} nmb={index} quarter smallText/> : ''
 						)
 					}
 				</div>

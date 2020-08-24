@@ -10,7 +10,7 @@ const styles = () => ({
 		width:'100%'
 	},
 	setColor:{
-		color:'white',
+		color:'white!important',
 		borderColor:'white',
 		'&:before': {
             borderColor:'white',
@@ -30,7 +30,7 @@ const PositionSelect = (props) => {
 				Position
 			</InputLabel>
 			<Select
-				 className={classes.setColor}
+				className={classes.setColor}
 				labelId="TeamPositionSelectLabel"
 				id="TeamPositionSelect"
 				label="Position"

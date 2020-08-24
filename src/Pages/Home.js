@@ -7,6 +7,7 @@ import Image from '../Assets/BackgroundImages/Red_Background.jpg';
 import Skyline from '../Assets/BackgroundImages/skyline.png';
 import { Link } from 'react-router-dom';
 import Theme from '../Theme/Theme';
+import NameDisplay from '../Components/NameDisplay';
 
 const mapStateToProps = state => {
 	return { 
@@ -118,9 +119,10 @@ const ConnectedHome = (props) => {
 				<Divider/>
 				<div>
 					{Object.keys(props.players).length === 0 ? "" :props.players.map((el,index) => (
-						<div key={index}>
-							<span className={classes.twentypx}>{el.name}</span>
-						</div>
+						//<div key={index}>
+						//	<span className={classes.twentypx}>{el.name}</span>
+						//</div>
+						<NameDisplay key={index} name={el.name} />
 					))}
 				</div>
 			</div>

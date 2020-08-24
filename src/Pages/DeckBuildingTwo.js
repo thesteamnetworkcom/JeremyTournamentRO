@@ -5,6 +5,7 @@ import Button from '@material-ui/core/Button';
 import Header from '../Components/Header';
 import Divider from '@material-ui/core/Divider';
 import MatchMini from '../Components/MatchMini';
+import MatchMiniV2 from '../Components/MatchMiniV2';
 
 const mapStateToProps = state => {
 	return {
@@ -92,7 +93,7 @@ const ConnectedDeckBuildingTwo = (props) => {
 				props.matches.finalsRoundOne !== undefined ?
 					props.matches.finalsRoundOne.Matches.map((el, index)=>
 						index < 2 ? 
-							<MatchMini matchRound="finalsRoundOne" key={index} nmb={index} /> : ''
+							<MatchMiniV2 matchRound="finalsRoundOne" key={index} nmb={index} /> : ''
 					) : ''
 			}
 				</div>
@@ -101,7 +102,7 @@ const ConnectedDeckBuildingTwo = (props) => {
 				props.matches.finalsRoundOne !== undefined ?
 					props.matches.finalsRoundOne.Matches.map((el, index)=>
 						index > 1 ? 
-							<MatchMini matchRound="finalsRoundOne" key={index} nmb={index} /> : ''
+							<MatchMiniV2 matchRound="finalsRoundOne" key={index} nmb={index} /> : ''
 					) : ''
 			}
 				</div>

@@ -4,6 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Header from '../Components/Header';
 import ConspiracyPodMini from '../Components/ConspiracyPodMini';
 import Conspiracy4v4Mini from '../Components/Conspiracy4v4Mini';
+import Theme from '../Theme/Theme';
 
 const mapStateToProps = state => {
 	return {
@@ -13,7 +14,7 @@ const mapStateToProps = state => {
 	}
 }
 
-const styles = (props) => ({
+const styles = (Theme) => ({
 	playerCard:{
 		'margin-bottom':10,
 		padding:10,
@@ -46,16 +47,30 @@ const styles = (props) => ({
 	miniMatches:{
 		'flex-grow':1,
 		display:'flex',
+		[Theme.breakpoints.down('sm')]:{
+			'flex-direction':'column',
+		}
 	},
 	leftSide:{
 		width:'50%',
+		[Theme.breakpoints.down('sm')]:{
+			width:'100%',
+			'flex-grow':1,
+		}
 	},
 	rightSide:{
 		width:'50%',
+		[Theme.breakpoints.down('sm')]:{
+			width:'100%',
+			'flex-grow':1,
+		}
 	},
 	mHeader:{
 		width:'50%',
 		display:'inline-block',
+		[Theme.breakpoints.down('sm')]:{
+			display:'none',
+		}
 	}
 })
 

@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { withStyles } from '@material-ui/core/styles';
 import Header from '../Components/Header';
 import MatchLarge from '../Components/MatchLarge';
+import MatchLargeV2 from '../Components/MatchLargeV2';
 import Button from '@material-ui/core/Button';
 import Theme from '../Theme/Theme';
 
@@ -73,7 +74,7 @@ const ConnectedFinalRound1 = (props) => {
 					{Object.keys(props.matches).length === 0 ? "" :
 						props.matches.finalsRoundOne.Matches.map((el,index)=>
 							index < 2 ?
-								<MatchLarge match={el} index={index} key={index} group="finalsRoundOne" /> : ''
+								<MatchLargeV2 match={el} index={index} key={index} group="finalsRoundOne" /> : ''
 						)
 					}
 				</div>
@@ -81,7 +82,7 @@ const ConnectedFinalRound1 = (props) => {
 					{Object.keys(props.matches).length === 0 ? "" :
 						props.matches.finalsRoundOne.Matches.map((el,index)=>
 							index > 1 ?
-								<MatchLarge match={el} index={index} key={index} group="finalsRoundOne" /> : ''
+								<MatchLargeV2 match={el} index={index} key={index} group="finalsRoundOne" /> : ''
 						)
 					}
 				</div>

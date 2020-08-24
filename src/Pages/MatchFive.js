@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { withStyles } from '@material-ui/core/styles';
 import Header from '../Components/Header';
 import MatchLarge from '../Components/MatchLarge';
+import MatchLargeV2 from '../Components/MatchLargeV2';
 import Theme from '../Theme/Theme';
 
 const mapStateToProps = state => {
@@ -64,7 +65,7 @@ const ConnectedMatchFive = (props) => {
 					{Object.keys(props.matches).length === 0 ? "" :
 						props.matches.matchFive.Matches.map((el,index)=>
 							index < 2 ?
-								<MatchLarge key={index} match={el} index={index} group="matchFive" /> : ''
+								<MatchLargeV2 key={index} match={el} index={index} group="matchFive" /> : ''
 						)
 					}
 				</div>
@@ -72,7 +73,7 @@ const ConnectedMatchFive = (props) => {
 					{Object.keys(props.matches).length === 0 ? "" :
 						props.matches.matchFive.Matches.map((el,index)=>
 							index > 1 ?
-								<MatchLarge key={index} match={el} index={index} group="matchFive" /> : ''
+								<MatchLargeV2 key={index} match={el} index={index} group="matchFive" /> : ''
 						)
 					}
 				</div>

@@ -19,7 +19,7 @@ const styles = () => ({
         },
 	},
 	setColor:{
-		color:'white',
+		color:'white!important',
 		borderColor:'white',
 		'&:before': {
             borderColor:'white',
@@ -29,7 +29,7 @@ const styles = () => ({
         },
 	},
 	setColor2:{
-		color:'white',
+		color:'white!important',
 		borderColor:'white',
 		'&:before': {
             borderColor:'white',

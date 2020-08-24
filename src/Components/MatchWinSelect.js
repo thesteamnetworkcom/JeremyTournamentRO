@@ -8,7 +8,7 @@ import { withStyles } from '@material-ui/core/styles';
 
 const styles = () => ({
 	setColor:{
-		color:'white',
+		color:'white!important',
 		borderColor:'white',
 		'&:before': {
             borderColor:'white',

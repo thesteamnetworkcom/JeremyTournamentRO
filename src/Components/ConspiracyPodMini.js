@@ -32,19 +32,19 @@ const ConnectedConspiracyPodMini = (props) => {
 	const { classes } = props;
 	return(
 		<div className={classes.podWrapper}>
-			<span>POD: </span>
+			<span>POD:&nbsp;</span>
 			<span>
 				{getPlayer(props.players, props.group[0])}
 			</span>
-			<span> vs </span>
+			<span> &nbsp;vs&nbsp; </span>
 			<span>
 				{getPlayer(props.players, props.group[1])}
 			</span>
-			<span> vs </span>
+			<span> &nbsp;vs&nbsp; </span>
 			<span>
 				{getPlayer(props.players, props.group[2])}
 			</span>
-			<span> vs </span>
+			<span> &nbsp;vs&nbsp; </span>
 			<span>
 				{getPlayer(props.players, props.group[3])}
 			</span>

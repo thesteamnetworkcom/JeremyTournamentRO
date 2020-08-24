@@ -4,6 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Header from '../Components/Header';
 import MatchLarge from '../Components/MatchLarge';
+import MatchLargeV2 from '../Components/MatchLargeV2';
 import Theme from '../Theme/Theme';
 
 const mapStateToProps = state => {
@@ -73,7 +74,7 @@ const ConnectedFinalRound2 = (props) => {
 					{Object.keys(props.matches).length === 0 ? "" :
 						props.matches.finalsRoundTwo.Matches.map((el,index)=>
 							index < 2 ?
-								<MatchLarge match={el} index={index} key={index} group="finalsRoundTwo" /> : ''
+								<MatchLargeV2 match={el} index={index} key={index} group="finalsRoundTwo" /> : ''
 						)
 					}
 				</div>
@@ -81,7 +82,7 @@ const ConnectedFinalRound2 = (props) => {
 					{Object.keys(props.matches).length === 0 ? "" :
 						props.matches.finalsRoundTwo.Matches.map((el,index)=>
 							index > 1 ?
-								<MatchLarge match={el} index={index} key={index} group="finalsRoundTwo" /> : ''
+								<MatchLargeV2 match={el} index={index} key={index} group="finalsRoundTwo" /> : ''
 						)
 					}
 				</div>

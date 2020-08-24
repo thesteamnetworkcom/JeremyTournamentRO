@@ -5,6 +5,7 @@ import Header from '../Components/Header';
 import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
 import MatchMini from '../Components/MatchMini';
+import MatchMiniV2 from '../Components/MatchMiniV2';
 import Theme from '../Theme/Theme';
 
 const mapStateToProps = state => {
@@ -56,12 +57,23 @@ const styles = (Theme) => ({
 	miniMatches:{
 		'flex-grow':1,
 		display:'flex',
+		[Theme.breakpoints.down('sm')]:{
+			'flex-direction':'column',
+		}
 	},
 	leftSide:{
 		width:'50%',
+		[Theme.breakpoints.down('sm')]:{
+			width:'100%',
+			height:'50%',
+		}
 	},
 	rightSide:{
 		width:'50%',
+		[Theme.breakpoints.down('sm')]:{
+			width:'100%',
+			height:'50%',
+		}
 	}
 })
 
@@ -92,7 +104,7 @@ const ConnectedJumpstartDraft = (props) => {
 					{Object.keys(props.matches).length === 0 ? "" :
 						props.matches.matchOne.Matches.map((el, index) =>
 							index < 2 ?
-								<MatchMini matchRound="matchOne" key={index} nmb={index} /> : ''
+								<><MatchMiniV2 matchRound="matchOne" key={index} nmb={index} /><Divider/></> : ''
 						)
 					}
 				</div>
@@ -100,7 +112,7 @@ const ConnectedJumpstartDraft = (props) => {
 					{Object.keys(props.matches).length === 0 ? "" :
 						props.matches.matchOne.Matches.map((el, index) =>
 							index > 1 ?
-								<MatchMini matchRound="matchOne" key={index} nmb={index} /> : ''
+								<><MatchMiniV2 matchRound="matchOne" key={index} nmb={index} /><Divider/></>: ''
 						)
 					}
 				</div>

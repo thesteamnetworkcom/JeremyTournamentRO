@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { withStyles } from '@material-ui/core/styles';
 import Header from '../Components/Header';
 import MatchMini from '../Components/MatchMini';
+import MatchMiniV2 from '../Components/MatchMiniV2';
 import Divider from '@material-ui/core/Divider';
 
 const mapStateToProps = state => {
@@ -86,7 +87,7 @@ const ConnectedMysteryDraft = (props) => {
 					{Object.keys(props.matches).length === 0 ? "" :
 						props.matches.matchThree.Matches.map((el, index) =>
 							index < 4 ?
-								<MatchMini matchRound="matchThree" key={index} nmb={index} quarter/> : ''
+								<MatchMiniV2 matchRound="matchThree" key={index} nmb={index} quarter/> : ''
 						)
 					}
 				</div>
@@ -94,7 +95,7 @@ const ConnectedMysteryDraft = (props) => {
 					{Object.keys(props.matches).length === 0 ? "" :
 						props.matches.matchFour.Matches.map((el, index) =>
 							index < 4 ?
-								<MatchMini matchRound="matchFour" key={index} nmb={index} quarter/> : ''
+								<MatchMiniV2 matchRound="matchFour" key={index} nmb={index} quarter/> : ''
 						)
 					}
 				</div>
