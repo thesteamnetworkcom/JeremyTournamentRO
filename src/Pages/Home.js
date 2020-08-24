@@ -118,10 +118,8 @@ const ConnectedHome = (props) => {
 				</div>
 				<Divider/>
 				<div>
+					{console.log(props.players)}
 					{Object.keys(props.players).length === 0 ? "" :props.players.map((el,index) => (
-						//<div key={index}>
-						//	<span className={classes.twentypx}>{el.name}</span>
-						//</div>
 						<NameDisplay key={index} name={el.name} />
 					))}
 				</div>
