@@ -54,7 +54,6 @@ const mapDispatchToProps = (dispatch) => {
 const App = (props) => {
 	const { classes } = props;
 	useEffect(()=>{
-		{console.log("here")}
 		props.getNames();
 		props.getSteps();
 		props.getVanguards();

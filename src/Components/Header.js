@@ -79,12 +79,18 @@ const styles = (Theme) => ({
 	},
 	stepSkip:{
 		'border-radius':0,
-		width:'25%',
-		display:'inline-block',
-		height:'10%',
-		display:'inline-flex',
+		flex:'1 0 25%',
+		display:'flex',
+		height:'50px',
+		display:'flex',
 		'justify-content':'center',
 		'align-items':'center',
+		'text-align':'center',
+		padding:4
+	},
+	modalWrapper:{
+		display:'flex',
+		'flex-wrap':'wrap',
 	}
 });
 
@@ -105,7 +111,7 @@ const ConnectedHeader = (props) => {
 				aria-labelledby="simple-modal-title"
 				aria-describedby="simple-modal-description"
 			>
-				<>
+				<div className={classes.modalWrapper}>
 				{Object.keys(props.steps).map((key,index) => 
 					<Card className={classes.stepSkip} component={Link} to={"/"+props.steps[key].name}  key={index}>
 						{props.steps[key].displayName}
@@ -114,7 +120,7 @@ const ConnectedHeader = (props) => {
 				<Card className={classes.stepSkip} component={Link} to={"/standings"}>
 					Standings
 				</Card>
-				</>
+				</div>
 			</Modal>
 
 			<div className={classes.headerWrapper}>
