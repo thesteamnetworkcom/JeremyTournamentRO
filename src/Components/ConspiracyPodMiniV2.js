@@ -13,6 +13,7 @@ const useStyles = makeStyles({
 	podWrapper:{
 		width:'50%',
 		height:'100%',
+		flex:'1 0 100%',
 		padding:'5px',
 	},
 	top:{
