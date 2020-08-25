@@ -61,6 +61,7 @@ const styles = (Theme) => ({
 			width:'100%',
 			height:'50%',
 			'flex':'1 0 50%',
+			'align-items':'stretch',
 		}
 	},
 	rightSide:{
