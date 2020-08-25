@@ -55,16 +55,21 @@ const styles = (Theme) => ({
 	},
 	leftSide:{
 		width:'50%',
+		height:'100%',
 		display:'flex',
 		[Theme.breakpoints.down('sm')]:{
 			width:'100%',
+			height:'50%',
 			'flex':'1 0 50%',
 		}
 	},
 	rightSide:{
 		width:'50%',
+		height:'100%',
+		display:'flex',
 		[Theme.breakpoints.down('sm')]:{
 			width:'100%',
+			height:'50%',
 			'flex':'1 0 50%',
 		}
 	},
