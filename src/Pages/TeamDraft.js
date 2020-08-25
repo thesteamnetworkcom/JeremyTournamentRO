@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { withStyles } from '@material-ui/core/styles';
 import Header from '../Components/Header';
 import PlayerSelect from '../Components/PlayerSelect';
+import TeamDraftRow from '../Components/TeamDraftRow';
 import Button from '@material-ui/core/Button';
 
 const mapStateToProps = state => {
@@ -122,28 +123,42 @@ const ConnectedTeamDraft = (props) => {
 		<div className={classes.fullScreen}>
 			<Header loc={state.location}/>
 			{Object.keys(props.players).length === 0 ? "" :
-			<>
-			<div className={classes.captainRow}>
-				<div className={classes.rowLabel}>Captain:</div>
-				<PlayerSelect change={handleChange} val={1} players={props.players} />
-				<PlayerSelect change={null} val={11} players={props.players} disabled/>
-			</div>
-			<div className={classes.rowTwo}>
-				<div className={classes.rowLabel}>Nmbr Two:</div>
-				<PlayerSelect change={handleChange} val={2} players={props.players} />
-				<PlayerSelect change={null} val={12} players={props.players} disabled/>
-			</div>
-			<div className={classes.rowThree}>
-				<div className={classes.rowLabel}>Nmbr Three:</div>
-				<PlayerSelect change={null} val={17} players={props.players} disabled/>
-				<PlayerSelect change={handleChange} val={7} players={props.players} />
-			</div>
-			<div className={classes.rowFour}>
-				<div className={classes.rowLabel}>Nmbr Four:</div>
-				<PlayerSelect change={handleChange} val={4} players={props.players} />
-				<PlayerSelect change={null} val={14} players={props.players} disabled />
-			</div>
-			</>
+				<>
+					<TeamDraftRow 
+						label="Captain"
+						handleChange={handleChange}
+						val={1}
+						players={props.players}
+						handleChange2={null}
+						val2={11}
+						skewPos
+					/>
+					<TeamDraftRow
+						label="Player 2"
+						handleChange={handleChange}
+						val={2}
+						players={props.players}
+						handleChange2={null}
+						val2={12}
+					/>
+					<TeamDraftRow
+						label="Player 3"
+						handleChange={null}
+						val={17}
+						players={props.players}
+						handleChange2={handleChange}
+						val2={7}
+						skewPos
+					/>
+					<TeamDraftRow
+						label="Player 4"
+						handleChange={handleChange}
+						val={4}
+						players={props.players}
+						handleChange2={null}
+						val2={14}
+					/>
+				</>
 			}
 		</div>
 	)

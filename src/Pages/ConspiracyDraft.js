@@ -3,7 +3,9 @@ import { connect } from 'react-redux';
 import { withStyles } from '@material-ui/core/styles';
 import Header from '../Components/Header';
 import ConspiracyPodMini from '../Components/ConspiracyPodMini';
+import ConspiracyPodMiniV2 from '../Components/ConspiracyPodMiniV2';
 import Conspiracy4v4Mini from '../Components/Conspiracy4v4Mini';
+import Conspiracy4v4MiniV2 from '../Components/Conspiracy4v4MiniV2';
 import Theme from '../Theme/Theme';
 
 const mapStateToProps = state => {
@@ -53,6 +55,7 @@ const styles = (Theme) => ({
 	},
 	leftSide:{
 		width:'50%',
+		display:'flex',
 		[Theme.breakpoints.down('sm')]:{
 			width:'100%',
 			'flex-grow':1,
@@ -96,19 +99,25 @@ const ConnectedConspiracyDraft = (props) => {
 			<>
 			<div className={classes.miniMatches}>
 				<div className={classes.leftSide}>
-					<ConspiracyPodMini players={props.players} group={
+					<ConspiracyPodMiniV2
+						players={props.players}
+						group={
 						[props.matches.conspiracyPod.Matches[0].player1,
 						 props.matches.conspiracyPod.Matches[0].player2,
 						 props.matches.conspiracyPod.Matches[0].player3,
-						 props.matches.conspiracyPod.Matches[0].player4]} />
-					<ConspiracyPodMini players={props.players} group={
+						 props.matches.conspiracyPod.Matches[0].player4]}
+					/>
+					<ConspiracyPodMiniV2
+						players={props.players}
+						group={
 						[props.matches.conspiracyPod.Matches[1].player1,
 						 props.matches.conspiracyPod.Matches[1].player2,
 						 props.matches.conspiracyPod.Matches[1].player3,
-						 props.matches.conspiracyPod.Matches[1].player4]} />
+						 props.matches.conspiracyPod.Matches[1].player4]}
+					/>
 				</div>
 				<div className={classes.rightSide}>
-					<Conspiracy4v4Mini players={props.players} 
+					<Conspiracy4v4MiniV2 players={props.players} 
 				team1={[
 					props.matches.conspiracy4v4.Matches[0].player1,
 					props.matches.conspiracy4v4.Matches[0].player2,
