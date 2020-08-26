@@ -32,7 +32,8 @@ const styles = () => ({
 		display:'flex',
 		'justify-content':'space-between',
 		'align-items':'center',
-		height:'50%',
+		width:'100%',
+		backgroundColor:'rgba(255,255,255,.5)'
 	},
 	plyr:{
 		width:'20%',
@@ -42,7 +43,8 @@ const styles = () => ({
 		'flex-direction':'column',
 		'flex-grow':1,
 		color:'white',
-		padding:10
+		'justify-content':'center',
+		'align-items':'center',
 	},
 	setColor:{
 		color:'white',
