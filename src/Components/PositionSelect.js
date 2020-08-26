@@ -26,9 +26,6 @@ const PositionSelect = (props) => {
 
 	return(
 		<FormControl variant="outlined" className={classes.fullWidth}>
-			<InputLabel className={classes.setColor} id="TeamPositionSelectLabel">
-				Position
-			</InputLabel>
 			<Select
 				className={classes.setColor}
 				labelId="TeamPositionSelectLabel"

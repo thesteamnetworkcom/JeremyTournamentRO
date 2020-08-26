@@ -35,6 +35,10 @@ const styles = () => ({
 		'& >div':{
 			'flex-grow':1
 		}
+	},
+	pwrapper:{
+		backgroundColor:'rgba(255,255,255,.5)',
+		padding:4,
 	}
 })
 
@@ -60,19 +64,19 @@ const ConnectedConspiracyPodLarge = (props) => {
 	}
 	return(
 		<div className={classes.flex}>
-			<div>
+			<div className={classes.pwrapper}>
 				<span>{getPlayer(props.players, props.group[0])}</span><br/>
 				<PositionSelect change={handleChange} pos={props.match.player1pos} tgt="player1pos"/>
 			</div>
-			<div>
+			<div className={classes.pwrapper}>
 				<span>{getPlayer(props.players, props.group[1])}</span><br/>
 				<PositionSelect change={handleChange} pos={props.match.player2pos} tgt="player2pos"/>
 			</div>
-			<div>
+			<div className={classes.pwrapper}>
 				<span>{getPlayer(props.players, props.group[2])}</span><br/>
 				<PositionSelect change={handleChange} pos={props.match.player3pos} tgt="player3pos"/>
 			</div>
-			<div>
+			<div className={classes.pwrapper}>
 				<span>{getPlayer(props.players, props.group[3])}</span><br/>
 				<PositionSelect change={handleChange} pos={props.match.player4pos} tgt="player4pos"/>
 			</div>
