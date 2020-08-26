@@ -27,6 +27,7 @@ const styles = () => ({
 	wrapper:{
 		'flex-grow':1,
 		color:'white',
+		backgroundColor:'yellow',
 	}
 })
 
