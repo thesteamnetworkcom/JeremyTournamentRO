@@ -28,6 +28,9 @@ const styles = () => ({
 		'flex-grow':1,
 		color:'white',
 		backgroundColor:'yellow',
+		display:'flex',
+		'flex-direction':'column',
+		'align-items':'stretch',
 	}
 })
 

@@ -29,9 +29,9 @@ const mapDispatchToProps = (dispatch) => {
 const styles = () => ({
 	flex:{
 		display:'flex',
-		height:'50%',
 		'justify-content':'center',
 		'align-items':'center',
+		'flex-grow':1,
 		'& >div':{
 			'flex-grow':1
 		}
