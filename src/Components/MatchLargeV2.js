@@ -7,6 +7,7 @@ const mapStateToProps = state => {
 	return {
 		matches:state.matches,
 		players:state.players,
+		vanguards:state.vanguards,
 	}
 }
 
@@ -111,6 +112,13 @@ function getPlayer(id, props){
 		}
 	}
 }
+function getVanguard(vanguardID, vanguards){
+	for(let i = 0; i < vanguards.length; i++){
+		if(vanguards[i].id === vanguardID){
+			return vanguards[i].name;
+		}
+	}
+}
 
 const ConnectedMatchLargeV2 = (props) => {
 	const { classes } = props;
@@ -148,7 +156,7 @@ const ConnectedMatchLargeV2 = (props) => {
 					</div>
 					<span className={classes.fontSmall}>{player1.charName}</span>
 					<span className={classes.fontLarge}>{player1.name}</span>
-					<span className={classes.fontSmall}>{player1.vanguardID}</span>
+					<span className={classes.fontSmall}>{getVanguard(player1.vanguardID, props.vanguards)}</span>
 					<div className={classes.winsForeground}>
 						<div className={classes.plus} onClick={null/*(event)=>handleChange("player1wins","plus")*/}></div>
 						<div className={classes.minus} onClick={null/*(event)=>handleChange("player1wins","minus")*/}></div>
@@ -160,7 +168,7 @@ const ConnectedMatchLargeV2 = (props) => {
 					</div>
 					<span className={classes.fontSmall}>{player2.charName}</span>
 					<span className={classes.fontLarge}>{player2.name}</span>
-					<span className={classes.fontSmall}>{player2.vanguardID}</span>
+					<span className={classes.fontSmall}>{getVanguard(player2.vanguardID, props.vanguards)}</span>
 					<div className={classes.winsForeground}>
 						<div className={classes.plus} onClick={null/*(event)=>handleChange("player2wins","plus")*/}></div>
 						<div className={classes.minus} onClick={null/*(event)=>handleChange("player2wins","minus")*/}></div>

@@ -6,6 +6,7 @@ const mapStateToProps = state => {
 	return {
 		matches:state.matches,
 		players:state.players,
+		vanguards:state.vanguards,
 	}
 };
 
@@ -69,7 +70,13 @@ function getPlayer(id, props){
 		}
 	}
 }
-
+function getVanguard(vanguardID, vanguards){
+	for(let i = 0; i < vanguards.length; i++){
+		if(vanguards[i].id === vanguardID){
+			return vanguards[i].name;
+		}
+	}
+}
 const ConnectedMatchMiniV2 = (props) => {
 	const classes = useStyles(props);
 	const player1 = getPlayer(props.matches[props.matchRound].Matches[props.nmb].player1, props)
@@ -80,12 +87,12 @@ const ConnectedMatchMiniV2 = (props) => {
 				<div className={classes.team + ' ' + classes.padright}>
 					<span className={classes.fontSmall}>{player1.charName}</span>
 					<span className={classes.fontLarge}>{player1.name}</span>
-					<span className={classes.fontSmall}>{player1.vanguardID}</span>
+					<span className={classes.fontSmall}>{getVanguard(player1.vanguardID, props.vanguards)}</span>
 				</div>
 				<div className={classes.team + ' ' + classes.padleft}>
 					<span className={classes.fontSmall}>{player2.charName}</span>
 					<span className={classes.fontLarge}>{player2.name}</span>
-					<span className={classes.fontSmall}>{player2.vanguardID}</span>
+					<span className={classes.fontSmall}>{getVanguard(player2.vanguardID, props.vanguards)}</span>
 				</div>
 			</div>
 		</div>

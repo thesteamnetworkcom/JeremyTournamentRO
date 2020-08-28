@@ -120,6 +120,9 @@ const ConnectedHeader = (props) => {
 				<Card className={classes.stepSkip} component={Link} to={"/standings"}>
 					Standings
 				</Card>
+				<Card className={classes.stepSkip} component={Link} to={"/vanguardviewer"}>
+					Vanguard Viewer	
+				</Card>
 				</div>
 			</Modal>
 

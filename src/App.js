@@ -34,6 +34,7 @@ import fetchNames from './Store/Actions/PlayerActions';
 import fetchSteps from './Store/Actions/StepsActions';
 import fetchVanguards from './Store/Actions/VanguardActions';
 import fetchMatches from './Store/Actions/MatchActions';
+import VanguardViewer from './Pages/VanguardViewer';
 
 const styles = () => ({
 	fullScreen:{
@@ -131,6 +132,9 @@ const App = (props) => {
 					</Route>
 					<Route path="/standings">
 						<Standings />
+					</Route>
+					<Route path="/vanguardviewer">
+						<VanguardViewer />
 					</Route>
 					<Route path="/">
 						<Home />
